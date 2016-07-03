@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Open Integrity</title>
+ <link href="http://openintegrity.github.io/atom.xml" rel="self"/>
+ <link href="http://openintegrity.github.io/"/>
+ <updated>Sun, 03 Jul 2016 22:47:00 +0200</updated>
+ <id>http://openintegrity.github.io</id>
+ <author>
+   <name>Jun Matsushita</name>
+   <email></email>
+ </author>
+
+
+</feed>

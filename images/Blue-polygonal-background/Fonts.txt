@@ -1,0 +1,9 @@
+FONTS:
+
+
+
+- BEBAS by Flat-it : http://www.fontsquirrel.com/fonts/Bebas
+
+
+
+- ALEX BRUSH by TypeSETit : http://www.fontsquirrel.com/fonts/alex-brush
