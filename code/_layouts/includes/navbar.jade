@@ -1,0 +1,24 @@
+nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+        i.fa.fa-bars
+      a.navbar-brand.page-scroll(onclick='$(".main").moveTo(1)').page-1
+        span.light  
+        |  Home
+    // Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      ul.nav.navbar-nav#menu
+        // Hidden li included to remove active class from about link when scrolled up past about section
+        li.hidden
+          a(href='#page-top')
+        li.page-2
+          a.page-scroll(onclick='$(".main").moveTo(2)') Approach
+        li.page-3
+          a.page-scroll(onclick='$(".main").moveTo(3)') Features
+        li.page-4
+          a.page-scroll(onclick='$(".main").moveTo(4)') Partners
+        li.page-5
+          a.page-scroll(onclick='$(".main").moveTo(5)') Contact Us
+    // /.navbar-collapse
+  // /.container

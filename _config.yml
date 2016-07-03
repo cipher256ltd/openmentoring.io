@@ -1,0 +1,53 @@
+markdown: kramdown
+permalink: none
+title: Open Integrity
+tagline: Measuring security and privacy in software.
+description: Measuring the adoption of digital security and privacy best practices
+url: 'http://openintegrity.github.io'
+baseurl: ''
+author:
+  name: Jun Matsushita
+  url: 'https://twitter.com/iilab'
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..3
+  enable_coderay: false
+redcarpet:
+  extensions:
+    - tables
+    - autolink
+    - strikethrough
+    - space_after_headers
+    - with_toc_data
+    - fenced_code_blocks
+    - lax_spacing
+    - smart
+code:
+  current_branch: master
+  base: 'https://code.iilab.org/openintegrity/'
+  repo: 'www'
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
+username: USER
+owner: ORG
+repo: REPO
+safe: false
+lsi: false
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - '*.Rmd'
+  - vendor
+  - .travis.yml

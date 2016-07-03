@@ -1,0 +1,17 @@
+generate:
+  - hercule:content
+  - metalsmith:content
+build:
+  - clean:server
+  - concurrent:server
+  - generate
+development:
+  - build
+  - connect:livereload
+validate:
+  - build
+  - connect:test
+  - checkPages:development
+default:
+  - development
+  - watch

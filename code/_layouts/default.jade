@@ -1,0 +1,19 @@
+doctype html
+html
+  include includes/head
+  body
+    include includes/navbar
+    .wrapper
+      .main
+        block main
+          != contents
+
+  script(src='js/jquery.min.js')
+  script(src='js/tether.min.js')  
+  script(src='js/bootstrap.min.js')  
+  script(src='js/jquery.cookie.js')
+  script(src='js/jquery.onepage-scroll.js')
+  script(src='js/front.js')
+  script(src='js/owl.carousel.js')
+  script(async='', defer='', src='https://buttons.github.io/buttons.js')
+  script(src='js/site.js')

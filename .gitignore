@@ -1,0 +1,6 @@
+secrets.sh
+_site
+_tmp
+metalsmith.tmp.json
+node_modules
+.sass-cache

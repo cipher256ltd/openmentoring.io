@@ -1,0 +1,65 @@
+options:
+  livereload: true
+images:
+  files:
+    - "<%= paths.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"
+    - code/public/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"
+  tasks:
+    - copy:images
+    - copy:code
+js:
+  files:
+    - "<%= paths.app %>/js/{,*/}*.js"
+  tasks:
+    - copy:js
+gruntfile:
+  files: [ 'Gruntfile.js', 'grunt/*.yml' ]
+  options:
+    reload: true
+  tasks:
+    - concurrent:server
+    - metalsmith:content
+config:
+  files: [ '_config.yml', '_content.yml', 'metalsmith.json' ]
+  options:
+    reload: true
+  tasks:
+    - concurrent:server
+    - hercule:content
+    - metalsmith:content
+content:
+  files:
+    - "content/**/*.*"
+  tasks:
+    - copy:images
+    - hercule:content
+    - metalsmith:content
+layouts:
+  files:
+    - "code/_layouts/**/*.jade"
+  tasks:
+    - copy:layouts
+    - hercule:content
+    - metalsmith:content
+styles:
+  files:
+    - "code/**/css/*.css"
+  tasks:
+    - "copy:styles"
+    - "copy:vendor-styles"
+fonts:
+  files:
+    - "code/**/fonts/*.css"
+  tasks:
+    - "copy:fonts"
+    - "copy:vendor-styles"
+livereload:
+  options:
+    livereload: "<%= connect.options.livereload %>"
+  files:
+    - "<%= paths.dist %>/{,*/}*.html"
+    - "<%= paths.dist %>/assets/{,*/}*.css"
+    - "<%= paths.dist %>/assets/{,*/}*.js"
+    - "<%= paths.dist %>/js/*.js"
+    - "<%= paths.dist %>/css/*.css"
+    - "<%= paths.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"
